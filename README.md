@@ -77,15 +77,15 @@ The script will:
 Update the URL variables and `Thread` calls at the bottom of `travel.py`:
 
 ```python
-url6 = "https://www.google.com/travel/search?q=hotels+in+Dar+es+Salaam+tanzania&..."
+url6 = "https://www.google.com/travel/search?..."
 
-th6 = Thread(target=handle_multi_threading, args=("Dar es Salaam", url6))
+th6 = Thread(target=handle_multi_threading, args=("Region", url6))
 th6.start()
 ```
 
 **How to get a Google Travel search URL:**
 1. Go to [google.com/travel](https://www.google.com/travel)
-2. Search for `hotels in <City> Tanzania`
+2. Search for `hotels in <City> Region`
 3. Copy the full URL from your browser's address bar.
 
 ### Thread Start Delay

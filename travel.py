@@ -164,29 +164,29 @@ def handle_multi_threading(target_city, url):
 
 
 
-url1 = "https://www.google.com/travel/search?q=hotels%20in%20Morogoro%20tanzania&ts=CAESCgoCCAMKAggDEAAqBwoFOgNVU0Q&ved=0CAAQ5JsGahgKEwjYi-q8krCSAxUAAAAAHQAAAAAQ1AM&ictx=3&authuser=0&qs=CAAgACgA&ap=MAA"
-url2 = "https://www.google.com/travel/search?q=hotels%20in%20Tanga%20tanzania&ts=CAESCgoCCAMKAggDEAAqBwoFOgNVU0Q&ved=0CAAQ5JsGahgKEwjYi-q8krCSAxUAAAAAHQAAAAAQhQQ&ictx=3&authuser=0&qs=CAAgACgA&ap=MAA"
-url3 = 'https://www.google.com/travel/search?q=hotels%20in%20Bagamoyo%20tanzania&ts=CAESCgoCCAMKAggDEAAaUwo1EjEyJTB4MTg1YzkxN2M5MTEwNzA1MzoweGFhMTc5ZmQ4OWNjNzY3MTQ6CEJhZ2Ftb3lvGgASGhIUCgcI6g8QAhgFEgcI6g8QAhgIGAMyAggCKgkKBToDVVNEGgA&ved=0CAAQ5JsGahgKEwjYi-q8krCSAxUAAAAAHQAAAAAQtgQ&ictx=3&authuser=0&qs=CAEgACgAOA1IAA&ap=MAE'
-url4 = "https://www.google.com/travel/search?q=hotels%20in%20Kigoma%20tanzania&ts=CAESCgoCCAMKAggDEAAqCQoFOgNVU0QaAA&ved=0CAAQ5JsGahgKEwjYi-q8krCSAxUAAAAAHQAAAAAQoQY&ictx=3&authuser=0&qs=CAAgACgA&ap=MAA"
-url5 = "https://www.google.com/travel/search?q=hotels%20in%20Tabora%20tanzania&ts=CAESCgoCCAMKAggDEAAqCQoFOgNVU0QaAA&ved=0CAAQ5JsGahgKEwjYi-q8krCSAxUAAAAAHQAAAAAQzwY&ictx=3&authuser=0&qs=CAAgACgA&ap=MAA"
+url1 = "https://www.google.com/travel/search?q="
+url2 = "https://www.google.com/travel/search?q="
+url3 = 'https://www.google.com/travel/search?q='
+url4 = "https://www.google.com/travel/search?q="
+url5 = "https://www.google.com/travel/search?q="
 
-th1 = Thread(target=handle_multi_threading, args=("Morogoro", url1))
+th1 = Thread(target=handle_multi_threading, args=("city1", url1))
 th1.start()
 time.sleep(10)
 
-th2 = Thread(target=handle_multi_threading, args=("Tanga", url2))
+th2 = Thread(target=handle_multi_threading, args=("city2", url2))
 th2.start()
 time.sleep(10)
 
-th3 = Thread(target=handle_multi_threading, args=("Bagamoyo", url3))
+th3 = Thread(target=handle_multi_threading, args=("city3", url3))
 th3.start()
 time.sleep(10)
 
-th4 = Thread(target=handle_multi_threading, args=("Kigoma", url4))
+th4 = Thread(target=handle_multi_threading, args=("city4", url4))
 th4.start()
 time.sleep(10)
 
-th5 = Thread(target=handle_multi_threading, args=("Tabora", url5))
+th5 = Thread(target=handle_multi_threading, args=("city5", url5))
 th5.start()
 
 th1.join()

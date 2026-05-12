@@ -110,7 +110,7 @@ class GoogleTravelLinkScraper(PlaywrightAssistantClass):
 
 ## 📊 Output Data Format
 
-### `city_wise_data/<City>.csv` and `Tanzania.csv`
+### `city_wise_data/<City>.csv` and `merge_file.csv`
 
 | Field                  | Description                                              |
 |------------------------|----------------------------------------------------------|
@@ -155,7 +155,7 @@ travel.py
     │   ├── extract_single_element()          # Get one element
     │   ├── extract_multiple_elements()       # Get list of elements
     │   ├── click_on_btn()                    # Click element by selector
-    │   └── save_into_file(df, city)          # Save to city CSV + Tanzania.csv
+    │   └── save_into_file(df, city)          # Save to city CSV + merge_file.csv
     │
     ├── GoogleTravelLinkScraper               # Pagination + link collection
     │   ├── handle_pagination()               # Click "Next" on results page
@@ -168,7 +168,7 @@ travel.py
         ├── Phase 1: Paginate + collect all links
         └── Phase 2: Visit each link + extract + save
 
-    └── 5 Threads launched in parallel (one per Tanzanian city)
+    └── 5 Threads launched in parallel (one per city)
 ```
 
 ---
@@ -203,7 +203,7 @@ Key differences from `PlaywrightAssistantClass`:
 
 ```python
 # Add a new city
-url6 = "https://www.google.com/travel/search?q=hotels+in+Dodoma+tanzania&..."
+url6 = "https://www.google.com/travel/search?..."
 th6 = Thread(target=handle_multi_threading, args=("Dodoma", url6))
 th6.start()
 th6.join()

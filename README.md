@@ -1,6 +1,6 @@
-# 🏨 Google Travel Hotel Scraper — Tanzania
+# 🏨 Google Travel Hotel Scraper — WorldWide
 
-A multi-threaded Python scraper for **[Google Travel](https://www.google.com/travel)** that extracts detailed hotel listings from multiple Tanzanian cities. It first collects all listing URLs across paginated search results, then visits each listing to extract a rich set of 22 data fields including amenities, images, check-in/out times, pricing, and verifications.
+A multi-threaded Python scraper for **[Google Travel](https://www.google.com/travel)** that extracts detailed hotel listings from multiple targeted cities. It first collects all listing URLs across paginated search results, then visits each listing to extract a rich set of 22 data fields including amenities, images, check-in/out times, pricing, and verifications.
 
 ---
 
